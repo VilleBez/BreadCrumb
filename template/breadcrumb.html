@@ -1,0 +1,11 @@
+<div class="breadCrumb">
+	<ul>
+		<li ng-repeat="breadcrumb in breadcrumbs.getAll()" class="node">
+			<ng-switch on="$last"> 
+				<span ng-switch-when="true">{{breadcrumb.name }}</span>
+				<span ng-switch-default><a href="{{ breadcrumb.path }}" class="hand">{{ breadcrumb.name }}</a></span>
+			</ng-switch>
+			<span ng-if="!$last" class="divider">></span>
+		</li>
+	</ul>
+</div>
